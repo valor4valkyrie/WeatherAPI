@@ -1,0 +1,30 @@
+apply  plugin: 'java'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //Spring dependencies
+    implementation 'org.springframework.boot:spring-boot-starter-web:latest.release'
+    implementation 'org.springframework:spring-core:latest.release'
+
+    //Marshalling/Unmarshalling
+    implementation 'com.fasterxml.jackson.core:jackson-core:latest.release'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:latest.release'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:latest.release'
+
+    //Testing
+    //Test dependencies
+    testImplementation ('org.springframework.boot:spring-boot-starter-test:latest.release'){
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

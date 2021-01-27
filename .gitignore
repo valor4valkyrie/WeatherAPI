@@ -1,0 +1,10 @@
+.gradle/
+gradle/
+gradlew
+.idea/
+gradlew.bat
+gedit
+out/
+build/
+src/main/resources/
+package-lock.json
